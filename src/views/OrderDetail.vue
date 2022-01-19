@@ -43,16 +43,16 @@
 
       <ion-card v-for="(item, index) in order?.items" :key="index">
         <ProductListItem :item="item" />
-        <ion-item lines="none" class="border-top">
+        <!-- <ion-item lines="none" class="border-top">
           <ion-label>{{ $t("Reason") }}</ion-label>
           <ion-select multiple="false" v-model="item.reason">
             <ion-select-option v-for="reason in unfillableReason" :value="reason.id" :key="reason.id">{{ $t(reason.label) }}</ion-select-option>
           </ion-select>
-        </ion-item>
+        </ion-item> -->
       </ion-card>
-      <ion-button expand="block" color="danger" fill="outline" @click="updateOrder(order)">
+      <!-- <ion-button expand="block" color="danger" fill="outline" @click="updateOrder(order)">
         {{ $t("Reject Order") }}
-      </ion-button>
+      </ion-button> -->
     </ion-content>
   </ion-page>
 </template>
@@ -71,8 +71,8 @@ import {
   IonLabel,
   IonList,
   IonPage,
-  IonSelect,
-  IonSelectOption,
+  // IonSelect,
+  // IonSelectOption,
   IonTitle,
   IonToolbar,
 } from "@ionic/vue";
@@ -103,8 +103,8 @@ export default defineComponent({
     IonLabel,
     IonList,
     IonPage,
-    IonSelect,
-    IonSelectOption,
+    // IonSelect,
+    // IonSelectOption,
     IonTitle,
     IonToolbar,
     ProductListItem
